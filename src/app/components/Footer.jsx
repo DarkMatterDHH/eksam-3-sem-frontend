@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white text-center p-8">
+    <footer
+      className="bg-black bg-cover bg-center text-white text-center p-8"
+      style={{ backgroundImage: "url('/Rectangle%2031.svg')" }}
+    >
       <div className="mb-12">
         <h1 className="text-3xl font-bold">
           NIGHT<span className="text-pink-600">CLUB</span>
