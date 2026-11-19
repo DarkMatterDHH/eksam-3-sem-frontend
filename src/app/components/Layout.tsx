@@ -1,9 +1,9 @@
-
 "use client";
 
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 export default function LayoutContent({
   children,
@@ -18,6 +18,7 @@ export default function LayoutContent({
       {isHome && <Hero />}
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
