@@ -1,7 +1,6 @@
 export default function Footer() {
   return (
     <footer className="bg-black text-white text-center p-8">
-      {/* Logo */}
       <div className="mb-12">
         <h1 className="text-3xl font-bold">
           NIGHT<span className="text-pink-600">CLUB</span>
@@ -9,26 +8,22 @@ export default function Footer() {
         <p className="text-xs tracking-widest">HAVE A GOOD TIME</p>
       </div>
 
-      {/* Location */}
       <div className="mb-8">
         <h2 className="text-pink-600 text-xl mb-3">LOCATION</h2>
         <p>Kompagnistræde 278</p>
         <p>1265 København K</p>
       </div>
 
-      {/* Opening Hours */}
       <div className="mb-12">
         <h2 className="text-pink-600 text-xl mb-3">OPENING HOURS</h2>
         <p>WED - THU 10:30 PM TO 3 AM</p>
         <p>SAT - SUN: 11 PM TO 5 AM</p>
       </div>
 
-      {/* Social Media */}
       <div className="mb-12">
         <h3 className="mb-4">Stay Connected With Us</h3>
 
         <div className="flex justify-center gap-6">
-          {/* Facebook */}
           <a
             href="https://www.facebook.com/"
             target="_blank"
@@ -46,7 +41,6 @@ export default function Footer() {
             </svg>
           </a>
 
-          {/* Snapchat */}
           <a
             href="https://www.snapchat.com/"
             target="_blank"
@@ -68,7 +62,6 @@ export default function Footer() {
             </svg>
           </a>
 
-          {/* Instagram */}
           <a
             href="https://www.instagram.com/"
             target="_blank"
@@ -94,7 +87,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="text-gray-400 text-sm">
         <p>Night Club</p>
         <p>All Rights Reserved</p>
