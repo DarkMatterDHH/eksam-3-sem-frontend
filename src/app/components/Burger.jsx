@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -7,10 +6,10 @@ export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "#home", label: "HOME" },
-    { href: "#events", label: "EVENTS" },
-    { href: "#book", label: "BOOK TABLE" },
-    { href: "#contact", label: "CONTACT US" },
+    { href: "./home", label: "HOME" },
+    { href: "./events", label: "EVENTS" },
+    { href: "./book", label: "BOOK TABLE" },
+    { href: "./contact", label: "CONTACT US" },
   ];
 
   return (
