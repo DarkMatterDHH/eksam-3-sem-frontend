@@ -1,16 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("EVENTS");
+  const pathname = usePathname();
 
   const links = [
-    { href: "#home", label: "HOME" },
-    { href: "#events", label: "EVENTS" },
-    { href: "#book", label: "BOOK TABLE" },
-    { href: "#contact", label: "CONTACT US" },
+    { href: "/", label: "HOME" },
+    { href: "/events", label: "EVENTS" },
+    { href: "/book", label: "BOOK TABLE" },
+    { href: "/contact", label: "CONTACT US" },
   ];
 
   return (
@@ -20,22 +22,21 @@ export default function BurgerMenu() {
         className="hidden items-center gap-7 md:flex"
       >
         {links.map((link) => (
-          <a
+          <Link
             key={link.href}
             href={link.href}
-            onClick={() => setActiveLink(link.label)}
             className={`relative pb-3 text-[13px] font-semibold transition-colors duration-300 hover:text-[#ff2670] ${
-              activeLink === link.label ? "text-[#ff2670]" : "text-white"
+              pathname === link.href ? "text-[#ff2670]" : "text-white"
             }`}
           >
             {link.label}
 
             <span
               className={`absolute bottom-0 left-1/2 h-[3px] -translate-x-1/2 bg-[#ff2670] transition-all duration-300 ${
-                activeLink === link.label ? "w-7 opacity-100" : "w-0 opacity-0"
+                pathname === link.href ? "w-7 opacity-100" : "w-0 opacity-0"
               }`}
             />
-          </a>
+          </Link>
         ))}
       </nav>
 
@@ -69,27 +70,22 @@ export default function BurgerMenu() {
 
           <div className="flex flex-col items-center gap-6">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => {
-                  setActiveLink(link.label);
-                  setIsOpen(false);
-                }}
+                onClick={() => setIsOpen(false)}
                 className={`relative pb-2 text-2xl font-bold transition-colors duration-300 hover:text-[#ff2670] ${
-                  activeLink === link.label ? "text-[#ff2670]" : "text-white"
+                  pathname === link.href ? "text-[#ff2670]" : "text-white"
                 }`}
               >
                 {link.label}
 
                 <span
                   className={`absolute bottom-0 left-1/2 h-[3px] -translate-x-1/2 bg-[#ff2670] transition-all duration-300 ${
-                    activeLink === link.label
-                      ? "w-7 opacity-100"
-                      : "w-0 opacity-0"
+                    pathname === link.href ? "w-7 opacity-100" : "w-0 opacity-0"
                   }`}
                 />
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
