@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "localhost",
-        port: "4000",
+        hostname: "eksam-3-sem.onrender",
+        port: ".com",
         pathname: "/**",
       },
     ],

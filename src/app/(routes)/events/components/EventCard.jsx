@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default async function EventCard({ page = 1, perPage = 3 }) {
   const apiUrl =
-    process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+    process.env.NEXT_PUBLIC_API_URL ?? "https://eksam-3-sem.onrender.com";
   const response = await fetch(`${apiUrl}/events`);
 
   if (!response.ok) {

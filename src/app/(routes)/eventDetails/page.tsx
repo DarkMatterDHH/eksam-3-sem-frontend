@@ -22,7 +22,7 @@ export default async function eventDetails({
   if (typeof id === "string" && /^\d+$/.test(id)) {
     try {
       const response = await fetch(
-        `https://dummyjson.com/products/${encodeURIComponent(id)}`,
+        `https://eksam-3-sem.onrender.com/${encodeURIComponent(id)}`,
         {
           cache: "no-store",
         },
