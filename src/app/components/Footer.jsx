@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 export default function Footer() {
   const [images, setImages] = useState([]);
 
-  const API_URL = "http://localhost:4000";
+  const API_URL =
+    process.env.NEXT_PUBLIC_API_URL ?? "https://eksam-3-sem.onrender.com";
 
   useEffect(() => {
     fetch(`${API_URL}/gallery`)
