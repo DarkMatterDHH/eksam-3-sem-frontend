@@ -45,7 +45,7 @@ export default function BookTable() {
         comment: form.comment.trim(),
       };
 
-      const response = await fetch("http://localhost:4000/reservations", {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL ?? "https://eksam-3-sem.onrender.com/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
